@@ -11,7 +11,7 @@
 
 void test_func_noop(void *data)
 {
-  data;
+  data=data;
 }
 
 int               test_create()
@@ -48,8 +48,8 @@ int               test_hashfunc()
 
 int test_hash_set()
 {
-  char        *key;
-  char        *data;
+  //char        *key;
+  //char        *data;
 
   hashtable_t *ht = hash_create(128);
 
@@ -107,7 +107,7 @@ int main()
   assert(test_hash_set() == 0);
   puts("test_hash_set OK");
 
-  assert(test_large() == 0);
+ assert(test_large() == 0);
   puts("test_large OK");
 
   return 0;
